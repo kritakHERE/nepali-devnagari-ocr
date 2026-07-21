@@ -16,3 +16,7 @@ https://github.com/tesseract-ocr/tesseract
 others projects:
 https://github.com/sushmitamalakar10/nepali-ocr
 https://github.com/hariperisetla/Devanagari-Handwritten-Character-Recognition-CNN
+
+
+idk: can be too ambisious
+https://github.com/HimalayaAI/nep-tokenizer
