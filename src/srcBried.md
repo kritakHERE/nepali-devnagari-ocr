@@ -3,11 +3,13 @@ Idk why this section exists
 datasets:
 https://data.mendeley.com/datasets/pxrnvp4yy8/4
 most promishing and potential:
----
+
+
+with matras: has password protected images, need to send an agreement form to them
 https://github.com/Calam-NN/Calam-Devanagari-database/tree/main
 https://github.com/Calam-NN/Calam-Devanagari-database/blob/main/Handwritten_Devnagari_Script_Database_Development.pdf
----
 
+---
 
 
 helpers:
