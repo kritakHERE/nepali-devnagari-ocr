@@ -18,6 +18,9 @@ https://tesseractocr.org/
 https://github.com/tesseract-ocr/tesseract
 
 
+references:
+how to approach this project:
+https://www.researchgate.net/publication/304406868_Deep_learning_based_large_scale_handwritten_Devanagari_character_recognition
 
 
 others projects:
