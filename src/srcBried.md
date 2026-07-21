@@ -2,7 +2,8 @@ Idk why this section exists
 
 datasets:
 https://data.mendeley.com/datasets/pxrnvp4yy8/4
-
+most promishing and potential:
+https://github.com/Calam-NN/Calam-Devanagari-database/tree/main
 
 
 helpers:
