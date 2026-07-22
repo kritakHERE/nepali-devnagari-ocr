@@ -13,6 +13,8 @@ https://github.com/Calam-NN/Calam-Devanagari-database/blob/main/Handwritten_Devn
 
 
 helpers:
+a girl's project:
+https://www.ijert.org/research/handwritten-devanagari-character-recognition-using-convolutional-neural-network-%20IJERTV13IS040076.pdf#page=1.76
 https://tesseractocr.org/
 *has nepali model but for printed doc as i heard*
 https://github.com/tesseract-ocr/tesseract
