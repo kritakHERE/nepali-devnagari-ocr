@@ -3,6 +3,7 @@ Idk why this section exists
 datasets:
 https://data.mendeley.com/datasets/pxrnvp4yy8/4
 most promishing and potential:
+https://github.com/datafiction/oya-nepali-nlp/tree/master
 
 
 with matras: has password protected images, need to send an agreement form to them
