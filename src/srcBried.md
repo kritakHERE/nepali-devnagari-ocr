@@ -1,3 +1,10 @@
+finalized dataset lists:
+CV: https://www.kaggle.com/datasets/sabarinathan/handwritten-hindi-word-recognition
+nlp (name list): https://github.com/datafiction/oya-nepali-nlp/blob/master/data/names/Nepali.txt
+
+
+
+
 Idk why this section exists
 
 datasets:
