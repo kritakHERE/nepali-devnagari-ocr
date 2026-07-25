@@ -4,6 +4,9 @@ datasets:
 https://data.mendeley.com/datasets/pxrnvp4yy8/4
 most promishing and potential:
 https://github.com/datafiction/oya-nepali-nlp/tree/master
+nepali names: nlp : https://github.com/datafiction/oya-nepali-nlp/blob/master/data/names/Nepali.txt
+
+
 
 
 with matras: has password protected images, need to send an agreement form to them
