@@ -2,6 +2,7 @@ finalized dataset lists:
 CV: https://www.kaggle.com/datasets/sabarinathan/handwritten-hindi-word-recognition
 nlp (name list): https://github.com/datafiction/oya-nepali-nlp/blob/master/data/names/Nepali.txt
 shername: https://github.com/amitness/Thar/blob/master/surnames_np.csv
+districts in nepal: https://github.com/mondyfy/nepal-info/blob/master/lib/districtsInDevanagari.js
 
 
 
