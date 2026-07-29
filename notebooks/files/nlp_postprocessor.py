@@ -223,11 +223,11 @@ class NLPPostProcessor:
     # Which vocab list to search per field name.
     # Fields not in this map get no fuzzy correction (just normalisation).
     _FIELD_TO_VOCAB_KEY: dict[str, str] = {
-        "first_name":        "first_names",
+        #"first_name":        "first_names",
         "last_name":         "last_names",
-        "father_first_name": "first_names",
+        #"father_first_name": "first_names",
         "father_last_name":  "last_names",
-        "mother_first_name": "first_names",
+        #"mother_first_name": "first_names",
         "mother_last_name":  "last_names",
         "city_district":     "districts",
         # place_of_birth and nationality handled separately below
