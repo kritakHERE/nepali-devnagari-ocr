@@ -111,11 +111,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Launch the Nepali OCR Gradio GUI.")
     parser.add_argument("--model", required=True, help="Path to a p2_epoch*.pth checkpoint")
     parser.add_argument("--template-pdf", default=None, help="Path to the clean template PDF")
+    parser.add_argument("--vocab", default="vocab.json", help="Path to vocab.json for NLP post-processing")
     parser.add_argument("--share", action="store_true", help="Create a public shareable link (valid ~72h)")
     args = parser.parse_args()
 
     print("Loading pipeline (this may take a few seconds)...")
-    pipeline = OCRPipeline(model_path=args.model, template_pdf_path=args.template_pdf)
+    pipeline = OCRPipeline(model_path=args.model, template_pdf_path=args.template_pdf, vocab_path=args.vocab)
     print("Pipeline loaded. Starting GUI...")
 
     app = build_app(pipeline)

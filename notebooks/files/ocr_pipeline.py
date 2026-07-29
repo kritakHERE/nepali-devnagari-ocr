@@ -69,6 +69,7 @@ import torch.nn as nn
 import torchvision.models as models
 
 import template_config as cfg
+from nlp_postprocessor import NLPPostProcessor
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger("ocr_pipeline")
@@ -342,6 +343,7 @@ class OCRPipeline:
         self,
         model_path: str,
         template_pdf_path: str | None = None,
+        vocab_path: str = "vocab.json",
         device: str = "cpu",
     ):
         pdf_path = template_pdf_path or cfg.REFERENCE_TEMPLATE_PATH
@@ -350,6 +352,7 @@ class OCRPipeline:
             model_path=model_path,
             device=device,
         )
+        self.postprocessor = NLPPostProcessor(vocab_path=vocab_path)
 
     @staticmethod
     def _load_reference(pdf_path: str) -> np.ndarray:
@@ -379,8 +382,14 @@ class OCRPipeline:
             except Exception as e:  # noqa: BLE001
                 logger.warning("Field '%s' failed OCR: %s", field_name, e)
                 text = ""
-            results[field_name] = text
-            logger.info("  %-20s -> %r", field_name, text)
+
+            corrected = self.postprocessor.correct_field(field_name, text)
+            results[field_name] = corrected
+
+            if corrected != text:
+                logger.info("  %-20s -> %r  (corrected from %r)", field_name, corrected, text)
+            else:
+                logger.info("  %-20s -> %r", field_name, corrected)
 
         return results
 
@@ -400,11 +409,13 @@ if __name__ == "__main__":
     parser.add_argument("image", help="Path to the scanned/filled document image")
     parser.add_argument("--model", required=True, help="Path to a p2_epoch*.pth checkpoint")
     parser.add_argument("--template-pdf", default=None, help="Path to the clean template PDF")
+    parser.add_argument("--vocab", default="vocab.json", help="Path to vocab.json for NLP post-processing")
     parser.add_argument("--output", default=None, help="Optional path to write JSON output")
     args = parser.parse_args()
 
     pipeline = OCRPipeline(
         model_path=args.model,
         template_pdf_path=args.template_pdf,
+        vocab_path=args.vocab,
     )
     print(pipeline.run_to_json(args.image, args.output))
