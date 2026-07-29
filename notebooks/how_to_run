@@ -1,0 +1,7 @@
+inside of the main root "nepali-devnagari-ocr" open it with terminal, and paste the following code after every dependencies are installed:
+python gui.py --model ..\..\models\p2_epoch19_acc49.1.pth --vocab vocab.json 
+
+must install:
+pip install gradio
+pip install torchvision
+pip install opencv-python-headless torch numpy pymupdf --break-system-packages 
