@@ -9,8 +9,8 @@ This is a complete pipeline that processes a completed Nepali membership form, m
 | Member   | Role                                                           |
 |----------|----------------------------------------------------------------|
 | Kritak   | Pipeline implementation, model training, NLP post-processing   |
-| Noel     | Critical analysis, report writing                              |
-| Rashmi   | Results and evaluation, slides                                 |
+|Rashmi   | Critical analysis, report writing                              |
+|   Noel    | Results and evaluation, slides                                 |
 | Junisha  | README, slides                                                 | 
 
 ## Problem Statement
